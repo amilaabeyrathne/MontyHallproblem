@@ -1,7 +1,5 @@
 using Business;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NUnit.Framework;
-using Assert = NUnit.Framework.Assert;
 
 namespace MontyHallproblem.Test
 {
@@ -15,11 +13,9 @@ namespace MontyHallproblem.Test
         }
 
         [TestMethod]
-        [TestCase(1000)]
-        [TestCase(100000)]
-        [TestCase(1000000)]
-        public void Processor_StayingSameDoor_WinIsGreaterThanLoss(int numberOfIterations)
+        public void Processor_StayingSameDoor_WinIsGreaterThanLoss()
         {
+            int numberOfIterations = 100000;
             bool stay = true;
             var result = this._montyProcessorService.Processor(numberOfIterations, stay);
 
@@ -27,12 +23,9 @@ namespace MontyHallproblem.Test
         }
 
         [TestMethod]
-        [TestCase(7)]
-        [TestCase(1000)]
-        [TestCase(100000)]
-        [TestCase(10000000)]
-        public void Processor_StayingSameDoor_LossIsGreaterThanWin(int numberOfIterations)
+        public void Processor_StayingSameDoor_LossIsGreaterThanWin()
         {
+            int numberOfIterations = 10000;
             bool stay = true;
 
             var result = this._montyProcessorService.Processor(numberOfIterations, stay);
@@ -52,11 +45,9 @@ namespace MontyHallproblem.Test
         }
 
         [TestMethod]
-        [TestCase(1000)]
-        [TestCase(100000)]
-        [TestCase(1000000)]
-        public void Processor_ChangingDoor_WinIsGreaterThanLoss(int numberOfIterations)
+        public void Processor_ChangingDoor_WinIsGreaterThanLoss()
         {
+            int numberOfIterations = 50000;
             bool stay = false;
             var result = this._montyProcessorService.Processor(numberOfIterations, stay);
 
