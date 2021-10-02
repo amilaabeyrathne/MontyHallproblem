@@ -48,7 +48,7 @@ namespace Business
                 }
             }
 
-            resultDTO.numberOfSimulations = numberOfSimulations;
+            resultDTO.NumberOfSimulations = numberOfSimulations;
             resultDTO.NumberOfWins = numberOfWins;
             resultDTO.IsStay = isStay;
             resultDTO.NumberOfLosses = numberOfSimulations - numberOfWins;

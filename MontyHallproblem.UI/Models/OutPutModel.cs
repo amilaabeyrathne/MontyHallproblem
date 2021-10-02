@@ -7,7 +7,7 @@ namespace MontyHallproblem.Models
 {
     public class OutPutModel
     {
-        public int numberOfSimulations { get; set; }
+        public int NumberOfSimulations { get; set; }
         public int NumberOfWins { get; set; }
         public string StayResult { get; set; }
         public int NumberOfLosses { get; set; }
