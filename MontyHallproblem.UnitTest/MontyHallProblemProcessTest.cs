@@ -1,7 +1,8 @@
-using Business;
+﻿using Business;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
-namespace MontyHallproblem.Test
+namespace MontyHallproblem.UnitTest
 {
     [TestClass]
     public class MontyHallProblemProcessTest

@@ -17,42 +17,41 @@ namespace Business
          /// <returns></returns>
         public ResultDTO Processor(int numberOfSimulations, bool isStay)
         {
-            int wins = 0;
+            int numberOfWins = 0;
 
             ResultDTO resultDTO = new ResultDTO();
 
-            Random gen = new Random();
+            Random randomGen = new Random();
 
-            for (int plays = 0; plays < numberOfSimulations; plays++)
+            for (int simulation = 0; simulation < numberOfSimulations; simulation++)
             {
-                int[] doors = { 0, 0, 0 };//0 => goat, 1 => car
+                int[] doorsArray = { 0, 0, 0 };//0 => goat, 1 => car
 
-                var winner = gen.Next(3);
-                doors[winner] = 1; //put a winner in a random door
+                var winnerDoor = randomGen.Next(3);
+                doorsArray[winnerDoor] = 1; // winner to a random door
 
-                int choice = gen.Next(3); //pick a door randomly
-                int shownDoor; //the shown door
+                int pickedDoor = randomGen.Next(3); //pick a door randomly
+                int openedFoor; // opend door
                 do
                 {
-                    shownDoor = gen.Next(3);
+                    openedFoor = randomGen.Next(3);
                 }
-                while (doors[shownDoor] == 1 || shownDoor == choice); //don't show the winner or the choice
+                while (doorsArray[openedFoor] == 1 || openedFoor == pickedDoor); //don't open the winner door or the choosen door
 
                 if (isStay)
                 {
-                    wins += doors[choice]; // won by staying
+                    numberOfWins += doorsArray[pickedDoor]; // won => staying
                 }
                 else 
                 {
-                    //the switched (last remaining) door is (3 - choice - shown), because 0+1+2=3
-                    wins += doors[3 - choice - shownDoor];
+                    numberOfWins += doorsArray[3 - pickedDoor - openedFoor];// pick the remaining door
                 }
             }
 
             resultDTO.numberOfSimulations = numberOfSimulations;
-            resultDTO.NumberOfWins = wins;
+            resultDTO.NumberOfWins = numberOfWins;
             resultDTO.IsStay = isStay;
-            resultDTO.NumberOfLosses = numberOfSimulations - wins;
+            resultDTO.NumberOfLosses = numberOfSimulations - numberOfWins;
 
             return resultDTO;
         }

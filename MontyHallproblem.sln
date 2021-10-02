@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MontyHallproblem.Common", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MontyHallproblem.UI", "MontyHallproblem.UI\MontyHallproblem.UI.csproj", "{FC00E05E-D871-41FB-80B2-4EC867686C73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MontyHallproblem.Test", "MontyHallproblem.Test\MontyHallproblem.Test.csproj", "{B959BB4B-A61F-4090-8097-E43CC24C5E46}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MontyHallproblem.UnitTest", "MontyHallproblem.UnitTest\MontyHallproblem.UnitTest.csproj", "{618B1C18-05D3-4777-8393-64A9D6E4C11A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{FC00E05E-D871-41FB-80B2-4EC867686C73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC00E05E-D871-41FB-80B2-4EC867686C73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC00E05E-D871-41FB-80B2-4EC867686C73}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B959BB4B-A61F-4090-8097-E43CC24C5E46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B959BB4B-A61F-4090-8097-E43CC24C5E46}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B959BB4B-A61F-4090-8097-E43CC24C5E46}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B959BB4B-A61F-4090-8097-E43CC24C5E46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{618B1C18-05D3-4777-8393-64A9D6E4C11A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{618B1C18-05D3-4777-8393-64A9D6E4C11A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{618B1C18-05D3-4777-8393-64A9D6E4C11A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{618B1C18-05D3-4777-8393-64A9D6E4C11A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

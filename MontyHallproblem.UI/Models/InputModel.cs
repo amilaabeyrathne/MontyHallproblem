@@ -9,7 +9,7 @@ namespace MontyHallproblem.Models
     public class InputModel
     {
         [Required(ErrorMessage = "Required !!!")]
-        [Range(0,10000000)]
+        [Range(1,10000000)]
         public int NumberOfSimulations { get; set; }
         public string IsStay { get; set; }
     }
